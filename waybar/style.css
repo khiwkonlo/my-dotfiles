@@ -1,0 +1,91 @@
+/* ============================= */
+/*  Catppuccin-Mocha Waybar Style */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Symbols Nerd Font Mono", monospace;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 0 8px;
+}
+
+
+window#waybar {
+  background: rgba(30, 30, 46, 0.55);  /* semi-transparent background */
+  /* backdrop-filter: blur(25px); */    /* remove blur (GTK3 doesn't support this) */
+  border: 1px solid rgba(137, 180, 250, 0.3); /* subtle border glow */
+  color: #cdd6f4;
+  box-shadow: 0 0 8px rgba(137, 180, 250, 0.2); /* soft glow to fake depth */
+  transition: background-color 0.5s ease;
+}
+
+
+#workspaces button {
+  color: #a6adc8;
+  padding: 0 10px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+#workspaces button.active {
+  background: rgba(137, 180, 250, 0.3);
+  color: #89b4fa;
+}
+
+#clock {
+  font-weight: bold;
+  color: #cdd6f4;
+  padding: 0 15px;
+}
+
+#battery, #network, #pulseaudio, #custom-bluetooth, #custom-brightness, #custom-power, #custom-notification, #hyprland-language {
+  margin: 0 8px;
+  color: #cdd6f4;
+}
+
+#custom-power {
+  color: #f38ba8;
+}
+
+#battery.charging {
+  color: #a6e3a1;
+}
+
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#pulseaudio.muted {
+  color: #f9e2af;
+}
+
+tooltip {
+  background: rgba(17, 17, 27, 0.8);
+  border: 1px solid #89b4fa;
+  color: #cdd6f4;
+}
+
+#custom-net_speed {
+  color: #89b4fa;           /* Soft blue for speed text */
+  font-weight: 600;
+  padding: 0 8px;
+  margin: 0 6px;
+  background: rgba(137, 180, 250, 0.15);
+  border-radius: 6px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+#custom-net_speed:hover {
+  color: #b4befe;
+  background: rgba(137, 180, 250, 0.3);
+}
+#custom-mic {
+  color: #89b4fa;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+#custom-mic:hover {
+  color: #f38ba8;
+  transition: color 0.2s ease-in-out;
+}

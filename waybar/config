@@ -1,0 +1,101 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 27,
+
+  /* AUTOHIDE SETTINGS */
+  "autohide": true,
+  "autohide-timeout": 2,
+  "autohide-animation": "slide",
+  "autohide-reveal-on-hover": true,
+  "autohide-reveal-delay": 0.1,
+
+  "modules-left": [
+    "custom/notification",
+    "custom/net_speed",
+    "hyprland/language"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/brightness",
+    "pulseaudio",
+    "custom/mic",
+    "battery",
+    "custom/bluetooth",
+    "network",
+    "custom/power"
+  ],
+
+  "custom/notification": {
+    "format": "󰂚",
+    "tooltip": "Notifications",
+    "on-click": "swaync-client -t"
+  },
+
+  "hyprland/language": {
+    "format": " {short}",
+    "tooltip-format": "{full}",
+    "on-click": "hyprctl dispatch switchxkblayout next"
+  },
+
+  "clock": {
+    "format": "󰥔 {:%H:%M  %a %b %d}"
+  },
+
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "nwg-bar -t ~/.config/nwg-bar/bar.json -s ~/.config/nwg-bar/style.css",
+    "tooltip": "Power menu"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁹", "󰂁"],
+    "on-click": "~/.local/bin/power-toggle.sh",
+    "tooltip": "Click to toggle power mode"
+  },
+
+  "network": {
+    "format-wifi": "󰖩 {signalStrength}%",
+    "on-click": "kitty -e nmtui",
+    "tooltip": "Wi-Fi"
+  },
+
+  "custom/bluetooth": {
+    "format": "󰂯",
+    "on-click": "blueman-manager",
+    "tooltip": "Bluetooth"
+  },
+
+  "pulseaudio": {
+    "format": "󰕾 {volume}%",
+    "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "tooltip": "Volume"
+  },
+
+  "custom/brightness": {
+    "format": "󰃟 {}",
+    "exec": "echo $(($(brightnessctl get)*100/$(brightnessctl max)))%",
+    "interval": 2,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "tooltip": "Brightness"
+  },
+
+  "custom/net_speed": {
+    "exec": "bash -c '~/.config/waybar/scripts/net_speed.sh'",
+    "interval": 1,
+    "return-type": "json",
+    "tooltip": false
+  },
+
+  "custom/mic": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 2,
+    "exec": "~/.config/waybar/scripts/mic_status.sh",
+    "on-click": "~/.config/waybar/scripts/mic_toggle.sh",
+    "tooltip": "Microphone"
+  }
+}

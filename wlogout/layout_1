@@ -1,0 +1,26 @@
+[
+  {
+    "label": "lock",
+    "action": "swaylock -f"
+  },
+  {
+    "label": "logout",
+    "action": "loginctl terminate-user $USER"
+  },
+  {
+    "label": "suspend",
+    "action": "systemctl suspend"
+  },
+  {
+    "label": "shutdown",
+    "action": "systemctl poweroff"
+  },
+  {
+    "label": "hibernate",
+    "action": "systemctl hibernate"
+  },
+  {
+    "label": "reboot",
+    "action": "systemctl reboot"
+  }
+]

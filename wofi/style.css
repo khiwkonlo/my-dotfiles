@@ -1,0 +1,34 @@
+window {
+  background-color: rgba(20, 20, 30, 0.55); /* translucent background */
+  border: 1px solid rgba(100, 100, 120, 0.3);
+  border-radius: 10px;
+}
+
+#input {
+  background-color: rgba(30, 30, 40, 0.6);
+  color: #cdd6f4;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+#entry {
+  background-color: transparent;
+  color: #cdd6f4;
+}
+
+#entry:selected {
+  background-color: rgba(80, 150, 255, 0.3);
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+#text {
+  background-color: transparent;
+  color: inherit;
+}
+
+#outer-box {
+  background-color: transparent;
+  padding: 10px;
+}

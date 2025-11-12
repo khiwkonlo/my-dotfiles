@@ -1,0 +1,44 @@
+window {
+    background-color: transparent;
+    font-family: "JetBrainsMonoNF-Regular";
+    font-size: ${fntSize}px; /* Variable from script */
+    color: rgba(205, 214, 244, 0.7); /* Catppuccin Text */
+}
+
+button {
+    background-color: rgba(30, 30, 46, 0.7); /* Catppuccin Surface0 */
+    color: transparent; /* Hides text */
+    border: none;
+    border-radius: ${button_rad}px; /* Variable from script */
+    margin: 5px;
+    min-width: 80px;
+    min-height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: rgba(49, 50, 68, 0.8); /* Catppuccin Surface1 */
+}
+
+/* Icon Definitions */
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+}
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+}
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"));
+}
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"));
+}
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+}
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+}

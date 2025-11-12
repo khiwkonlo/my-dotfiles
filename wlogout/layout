@@ -1,0 +1,1 @@
+[{"label":"lock","action":"swaylock -f","keybind":"k"},{"label":"logout","action":"loginctl terminate-user $USER","keybind":"l"},{"label":"suspend","action":"systemctl suspend","keybind":"s"},{"label":"reboot","action":"systemctl reboot","keybind":"r"},{"label":"shutdown","action":"systemctl poweroff","keybind":"p"}]
